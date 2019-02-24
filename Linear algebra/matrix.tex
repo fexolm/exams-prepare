@@ -1,0 +1,99 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[left=12mm,top=0.5in, bottom=5in]{geometry}
+\usepackage{amsmath,amsthm,amssymb} 
+\usepackage{mathtext} 
+\usepackage[T1,T2A]{fontenc} 
+\usepackage[utf8]{inputenc} 
+\usepackage[english,russian]{babel}
+
+\begin{document}
+
+\section{Матрицы}
+\subsection{Определитель}
+Определитель 2-го порядка:
+$$\begin{vmatrix}
+1& 2 \\
+3& 4
+\end{vmatrix}
+= 1 * 4 - 2 * 3 = -2$$
+Определитель 3-го порядка:
+$$\begin{pmatrix}
+1& 2& 3 \\
+4& 5& 6 \\
+7& 8& 9
+\end{pmatrix}
+= 1*5*9 + 4*8*3 + 2*6*7 - 3*5*7 - 8*6*1 - 4*2*9 = 0$$
+$$\begin{pmatrix}
+2& 5& 7 \\
+6& 3& 4 \\
+5& -2& -3
+\end{pmatrix}
+= 2*3*(-3) + 6*(-2)*7 + 5*4*5 - 7*3*5 - 4*(-2)*2 - 6*5*(-3) = -1$$
+Если определитель матрицы = 0, то обратной матрицы не существует.
+\subsection{Транспонированная матрица}
+$$A=\begin{pmatrix}
+1& 2& 3 \\
+4& 5& 6 \\
+7& 8& 9
+\end{pmatrix}$$
+$$A^{T}=\begin{pmatrix}
+1& 4& 7 \\
+2& 5& 8 \\
+3& 6& 9
+\end{pmatrix}$$
+\newpage
+\subsection{Миноры и алгебраическое дополнение}
+Минор ($M_{строка, столбец}$):
+$$A=\begin{pmatrix}
+1& 2& 3 \\
+4& 5& 6 \\
+7& 8& 9
+\end{pmatrix}$$
+$$M_{11}=\begin{vmatrix}
+5& 6 \\
+8& 9
+\end{vmatrix}$$
+Алгебраическое дополнение ($A_{строка, столбец}$):
+$$A_{11}=(-1)^{1+1}*M_{11}=1*(-3)=-3$$
+\subsection{Обратная матрица}
+1. Найти определитель матрицы $|A|$. Если определитель = 0, то обратной матрицы не существует. \\
+2. Найти все алгебраические дополнения $A_{i,j}$. \\
+3. Составить вспомогательную матрицу $C$, состоящую из алгебраических дополнений. \\
+4. Найти матрицу $\tilde{A}$ путём траспонирования матрицы $C$. \\
+5. Найти обратную матрицу $$A^{-1}=\frac{1}{|A|}*\tilde{A}$$
+Пример:
+$$A=\begin{pmatrix}
+1& 2& 3 \\
+4& 5& 6 \\
+7& 8& 0
+\end{pmatrix}$$
+1. $|A|=96+84-105-48=27$ \\
+2. $A_{1,1}=(-1)^{1+1}*\begin{vmatrix}
+5& 6 \\
+8& 0
+\end{vmatrix}=-48$\\
+$A_{1,2}=(-1)^{1+2}*\begin{vmatrix}
+4& 6 \\
+7& 0
+\end{vmatrix}=42$ и т.д. \\
+3. $C=\begin{pmatrix}
+-48& 42& -3 \\
+24& -21& 6 \\
+-3& 6& -3
+\end{pmatrix}$ \\
+4. $\tilde{A}=C^{T}=\begin{pmatrix}
+-48& 24& -3 \\
+42& -21& 6 \\
+-3& 6& -3
+\end{pmatrix}$ \\
+5. $A^{-1}=\frac{1}{|A|}*\tilde{A}=\frac{1}{27}*\begin{pmatrix}
+-48& 24& -3 \\
+42& -21& 6 \\
+-3& 6& -3
+\end{pmatrix}=\begin{pmatrix}
+-\frac{16}{9}& \frac{8}{9}& -\frac{1}{9} \\
+\frac{14}{9}& -\frac{7}{9}& \frac{2}{9} \\
+-\frac{1}{9}& \frac{2}{9}& -\frac{1}{9}
+\end{pmatrix}$
+\section{Системы линейных уравнений}
+\end{document}
