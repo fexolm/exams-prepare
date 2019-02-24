@@ -1,0 +1,45 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
+\title{\LaTeX}  
+\date{}  
+\author{Артём Алексеев}
+
+\begin{document}  
+
+\section{Интегралы}
+\subsection{Таблица интегралов}
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft}
+$ \int{0dx} = C $ \\
+$ \int{dx} = x + C $ \\ 
+$ \int{x^n dx} = \frac{x^{n+1}}{n+1} + C $ \\
+$ \int{\frac{dx}{x}} = \ln{|x|} + C $ \\
+$ \int{a^x dx} = \frac{a^x}{\ln{a}} + C $ \\
+$ \int{e^x dx} = e^x + C $ \\ 
+$ \int{\cos{x}dx} = \sin{x} + C $ \\
+$ \int{\sin{x}dx} = -\cos{x} + C $
+\end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\begin{flushleft}
+$ \int{\frac{dx}{\sin^2{x}}} = -ctg{x} + C $ \\
+$ \int{\frac{dx}{\cos^2{x}}} = \tg{x} + C $ \\
+$ \int{\frac{dx}{x^2+a^2}} = \frac{1}{a} \arctan \frac{x}{a} + C $ \\
+$ \int{\frac{dx}{\sqrt{a^2-x^2}}} = \arcsin{x/a} + C $ \\
+$ \int{\frac{dx}{a^2-x^2}}=\frac{1}{2a}\ln{|\frac{a+x}{a-x}|} + C, x \neq a $ \\
+$ \int{\frac{dx}{\sqrt[]{x^2 \pm a^2}}} = \ln{|x + \sqrt[]{x^2 \pm a^2}|} + C $
+\end{flushleft}
+\end{minipage}
+
+\subsection{Свойства интегралов}
+1) $ (\int{f(x)dx})' = f(x) $ \\
+2) $ \int{d(f(x)} = f(x) + C $ \\
+3) $ \int{k f(x)dx} = k \int{f(x)dx)} $ 
+4) $ \int{(f(x) \pm g(x))dx} = \int{f(x)dx} \pm \int{g(x)dx}$
+
+\end{document}
