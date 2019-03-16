@@ -42,4 +42,25 @@ $ \int{\frac{dx}{\sqrt[]{x^2 \pm a^2}}} = \ln{|x + \sqrt[]{x^2 \pm a^2}|} + C $
 3) $ \int{k f(x)dx} = k \int{f(x)dx)} $ 
 4) $ \int{(f(x) \pm g(x))dx} = \int{f(x)dx} \pm \int{g(x)dx}$
 
+\subsection{Метод замены переменной}
+\subsubsection{Подведение функции под знак дифференциала}
+Пример 1: \\
+$ \int{\sin(3x + 1)dx} $ \\
+Подводим $ (3x+1) $ под знак диференциала \\
+$ \int{\sin(3x + 1)dx} = \frac{1}{3}\int{sin(3x+1}d(3x+1) $ \\
+По таблице $ \int{sin(x)dx} = -cos(x) + C $ \\
+$ \frac{1}{3}\int{sin(3x+1)d(3x+1)} = -\frac{1}{3}cos(3x+1) + C $
+\\
+Пример 2: \\
+$ \int{\frac{dx}{5 - 2x}} = -\frac{1}{2}\int{\frac{d(5-2x)}{5 - 2x}}
+= -\frac{1}{2}ln|5-2x|+C $
+
+\subsubsection{Замена переменной}
+Пример 1: \\
+$ \int{\sin(3x + 1)dx} $ \\
+$ t = 3x + 1 $ \\
+$ dx = \frac{dt}{3} $ \\
+$ \int{\sin(3x + 1)dx} = \frac{1}{3}\int{sin(t)dt} = -\frac{1}{3}cos(t) + C = -\frac{1}{3}cos(3x+1) + C $ 
+\subsection{Метод интегрирования по частям}
+
 \end{document}
